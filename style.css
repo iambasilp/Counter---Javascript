@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.Counter_box {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(158, 158, 245);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: .5rem;
+  box-shadow: 10px -7px rgba(0,0,0,0.4)
+}
+.Counter_box h1 {
+  font-size: 70px;
+  margin-bottom: 1rem;
+}
+.Counter_box .buttons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.Counter_box .buttons .btn {
+  background-color: orange;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.Counter_box .buttons .btn.decrease:active {
+  background-color: black;
+}
+.Counter_box .buttons .btn.reset:active {
+  background-color: red;
+}
+.Counter_box .buttons .btn.increase:active{
+    background-color: green;
+}
