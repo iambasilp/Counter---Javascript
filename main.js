@@ -1,18 +1,20 @@
-let Count = document.querySelector(".count")
-const Increase = document.querySelector(".increase")
-const Decrease = document.querySelector(".decrease")
-const Reset = document.querySelector(".reset")
+const Buttons = document.querySelectorAll(".btn");
+let digit = document.querySelector(".digit");
 
-let n = 0
-Increase.addEventListener('click',()=>{
-    n += 1
-   Count.textContent = n 
-})
-Decrease.addEventListener('click',()=>{
-    n -= 1
-   Count.textContent = n 
-})
-Reset.addEventListener('click',()=>{
-    n = 0
-    Count.textContent = n
-})
+let count = 0;
+
+
+Buttons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    let styles = e.currentTarget.classList;
+    if (styles.contains("increase")) {
+      count++;
+    }
+    else if(styles.contains("decrease")){
+        count--;
+    }
+    else {
+        count = 0;
+    }
+  });
+});
